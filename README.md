@@ -92,7 +92,7 @@ version: '3.7'
 
 services:
   meeteasier-app:
-    image: trcha/meeteasier:1.1
+    image: trcha/meeteasier:latest
     ports:
       - '8088:8080'
     restart: unless-stopped
