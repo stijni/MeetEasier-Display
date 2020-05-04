@@ -86,6 +86,29 @@ This application assumes you have:
     ```
 
 ***
+## Composefile
+```
+version: '3.7'
+
+services:
+  meeteasier-app:
+    image: trcha/meeteasier:1.1
+    ports:
+      - '8088:8080'
+    restart: unless-stopped
+    environment:
+      - USERNAME='email'
+      - PASSWORD='password'
+      - DOMAIN='your.domain'
+
+    networks:
+      - meeteasier
+
+networks:
+  meeteasier:
+```
+***
+
 
 ## Root Folder Structure Explained
 
