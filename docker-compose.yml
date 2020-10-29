@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  meeteasier-app:
+    image: trcha/meeteasier:latest
+    ports:
+      - '8088:8080'
+    restart: unless-stopped
+    environment:
+      - USERNAME='email'
+      - PASSWORD='password'
+      - DOMAIN='your.domain'
+      - URI='https://outlook.office365.com/EWS/Exchange.asmx'
+
+    networks:
+      - meeteasier
+
+networks:
+  meeteasier:
