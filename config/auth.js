@@ -4,7 +4,7 @@ module.exports = {
   'exchange' : {
     'username'  : process.env.USERNAME || 'SVCACCT_EMAIL@DOMAIN.COM',
     'password'  : process.env.PASSWORD || 'PASSWORD',
-    'uri'       : 'https://outlook.office365.com/EWS/Exchange.asmx'
+    'uri'       : process.env.URI || 'https://outlook.office365.com/EWS/Exchange.asmx'
   },
   // Ex: CONTOSO.COM, Contoso.com, Contoso.co.uk, etc.
   'domain' : process.env.DOMAIN || 'DOMAIN.COM'
